@@ -1,4 +1,3 @@
-const { count } = require("console");
 const lib = require("./lib");
 
 const odds_for_disease = 0.0001;   //disease which affects 1 in 10,000 people
@@ -42,7 +41,7 @@ function sim_test_people(run_people){
   console.log("chance a positive test reflects real disease is %i disease count in %i false positives", 
     disease_count, false_positive_count );
   console.log("chance of disease on positive test %f ", disease_count / false_positive_count);
-  console.log("chance of disease on positive test %f as a percentage", ((disease_count / false_positive_count)/100));
+  console.log("chance of disease on positive test %f as a percentage", ((disease_count / false_positive_count)*100));
 
   //console.log("real disease: ", true_positive);
 }
@@ -50,7 +49,7 @@ function sim_test_people(run_people){
 
 //sim_test_people(10000);
 
-sim_test_people(10000 * 100);
+sim_test_people(10000 * 10000);
 
 
 
